@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300;1,400;1,600;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    opacity: 0.9;
+    background-color: #E7FCF9;
+    background-size: 15px 15px;
+    background-position: 0 0,10px 10px;
+    display: flex;
+    min-height: 100vh;
+}
+
+.form{
+    background-color: white;
+    margin:auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 4.5em 3em ;
+    border-radius: 10px;
+    box-shadow:  -5px 10px 20px -10px;
+    text-align: center;
+}
+
+.form_title{
+    font-size: 1.7 rem;
+    margin-bottom: .5em;
+    color: #001A49;
+}
+
+.form_paragraph{
+    font-weight: 300;
+    color: #260027;
+}
+.form_link{
+    font-weight: 400;
+    color: black;
+}
+
+/*contenedor de imputs*/
+.form_container{
+margin-top: 3em;
+display: grid;
+gap: 2.5em;
+}
+
+.form_group{
+    position: relative;
+    --color: #575757;
+}
+
+.form_input{
+    width: 100%;
+    background: none;
+    color:#260027;
+    font-size: 1rem;
+    padding: .6em .3em;
+    border:none;
+    outline: none;
+    border-bottom: 1px solid var(--color);
+}
+
+/*efecto para subir la letra*/
+
+
+.form_input:focus + .form_label, .form_input:not(:placeholder-shown) + .form_label{
+    transform: translateY(-15px) scale(.7);
+    transform-origin: left top;
+    color:#260027;
+}
+
+
+.form_label{
+    color: var(--color);
+    cursor: pointer;
+    position: absolute;
+    border: none;
+    padding: none;
+    top:0;
+    left: 3px;
+    transform: translateY(5px);
+    transition: transform .5s, color .3s;
+
+}
+
+
+.form_submit{
+    background:#260027;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    font-size: 1rem;  
+    font-family: 'Poppins', sans-serif;
+    padding: .5em 0;
+    border-radius: .3em;
+    border: none;
+    cursor: pointer;
+}
+
+.buton .form_submit:hover
+{
+    background-color: red;
+}
+
+.buton
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.form_line{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color:#260027;
+}
+
+@media (max-width:425px) {
+    .form_title{
+        font-size: 1.8rem;
+    }
+}
